@@ -1,0 +1,2 @@
+class GiroController < ApplicationController
+end

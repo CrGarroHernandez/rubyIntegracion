@@ -1,0 +1,3 @@
+class ComunaController < ApplicationController
+
+end
