@@ -10,10 +10,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190412223549) do
+ActiveRecord::Schema.define(version: 20190429220803) do
+
+  create_table "categoria", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "nombre"
+    t.text "descripcion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "giros", id: :integer, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "actividad", null: false
+  end
+
+  create_table "marcas", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "nombre"
+    t.text "descripcion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "productos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "nombre"
+    t.string "descripcion"
+    t.datetime "fecha_elaboracion"
+    t.datetime "fecha_vencimiento"
+    t.integer "stock"
+    t.bigint "categoria_id"
+    t.bigint "marca_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["categoria_id"], name: "index_productos_on_categoria_id"
+    t.index ["marca_id"], name: "index_productos_on_marca_id"
   end
 
   create_table "sucursals", primary_key: "rut", id: :integer, default: nil, force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
@@ -41,5 +69,7 @@ ActiveRecord::Schema.define(version: 20190412223549) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "productos", "categoria", column: "categoria_id"
+  add_foreign_key "productos", "marcas"
   add_foreign_key "sucursals", "giros", name: "sucursal_giro_fk"
 end

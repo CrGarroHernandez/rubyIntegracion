@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  descripcion: MyString
+  fecha_elaboracion: 2019-04-29 18:05:26
+  fecha_vencimiento: 2019-04-29 18:05:26
+  stock: 1
+  categoria: one
+  marca: one
+
+two:
+  nombre: MyString
+  descripcion: MyString
+  fecha_elaboracion: 2019-04-29 18:05:26
+  fecha_vencimiento: 2019-04-29 18:05:26
+  stock: 1
+  categoria: two
+  marca: two

@@ -1,0 +1,52 @@
+<%= form_with(model: producto, local: true) do |form| %>
+  <% if producto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(producto.errors.count, "error") %> prohibited this producto from being saved:</h2>
+
+      <ul>
+      <% producto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :producto_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descripcion %>
+    <%= form.text_field :descripcion, id: :producto_descripcion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_elaboracion %>
+    <%= form.datetime_select :fecha_elaboracion, id: :producto_fecha_elaboracion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fecha_vencimiento %>
+    <%= form.datetime_select :fecha_vencimiento, id: :producto_fecha_vencimiento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :stock %>
+    <%= form.number_field :stock, id: :producto_stock %>
+  </div>
+
+  <div class="field">
+    <%= form.label :categoria_id %>
+    <%= form.text_field :categoria_id, id: :producto_categoria_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :marca_id %>
+    <%= form.text_field :marca_id, id: :producto_marca_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

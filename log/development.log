@@ -38484,3 +38484,369 @@ Processing by Devise::SessionsController#new as HTML
 Completed 200 OK in 485ms (Views: 478.4ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2019-04-28 03:40:46 -0400
+  [1m[35m (1.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 25ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-28 03:41:03 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 1524ms (Views: 1486.4ms | ActiveRecord: 20.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-28 03:41:12 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"I2A0i4tsQjuBvcZn76mAwyKgpB/nUR/Hy64BNeHcdAoY3wgx7H0FrGwIJ9Se6ZyU/0dqXZhCXadkLj+Emg4WGg==", "user"=>{"email"=>"javiermunozarcaya@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'javiermunozarcaya@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 655ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-28 03:41:13 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 273ms (Views: 243.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lib/assets/img/sidebar-5.jpg" for ::1 at 2019-04-28 03:41:14 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/lib/assets/img/sidebar-5.jpg"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/users/sign_out" for ::1 at 2019-04-28 03:41:49 -0400
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"Y/3mVmtcgWb/g5voC2m4zkx3lZnXoGNad/0qQl/l+dLsuVSSmg274+S8cLnzb4qWwgjGlKHbn+R7cNaArr5NOA=="}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 47ms (ActiveRecord: 3.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-28 03:41:50 -0400
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-28 03:41:50 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (4.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (41.0ms)
+Completed 200 OK in 385ms (Views: 383.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/password/new" for ::1 at 2019-04-28 03:41:52 -0400
+Processing by Devise::PasswordsController#new as HTML
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (1.0ms)
+  Rendered devise/shared/_links.html.erb (1.0ms)
+  Rendered devise/passwords/new.html.erb within layouts/application (65.9ms)
+Completed 200 OK in 482ms (Views: 451.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (19.4ms)[0m  [1m[34mSELECT GET_LOCK('2747180386699309680', 0)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductos (20190429220526)
+  [1m[35m (293.3ms)[0m  [1m[35mCREATE TABLE `productos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `fecha_elaboracion` datetime, `fecha_vencimiento` datetime, `stock` int, `categoria_id` bigint, `marca_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_productos_on_categoria_id`  (`categoria_id`),  INDEX `index_productos_on_marca_id`  (`marca_id`), CONSTRAINT `fk_rails_d08a14d98a`
+FOREIGN KEY (`categoria_id`)
+  REFERENCES `categoria` (`id`)
+, CONSTRAINT `fk_rails_e752c6fdd1`
+FOREIGN KEY (`marca_id`)
+  REFERENCES `marcas` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (12.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('2747180386699309680')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2747180386699309680', 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductos (20190429220526)
+  [1m[35m (116.6ms)[0m  [1m[35mCREATE TABLE `productos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `fecha_elaboracion` datetime, `fecha_vencimiento` datetime, `stock` int, `categoria_id` bigint, `marca_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_productos_on_categoria_id`  (`categoria_id`),  INDEX `index_productos_on_marca_id`  (`marca_id`), CONSTRAINT `fk_rails_d08a14d98a`
+FOREIGN KEY (`categoria_id`)
+  REFERENCES `categoria` (`id`)
+, CONSTRAINT `fk_rails_e752c6fdd1`
+FOREIGN KEY (`marca_id`)
+  REFERENCES `marcas` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('2747180386699309680')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2747180386699309680', 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductos (20190429220526)
+  [1m[35m (164.6ms)[0m  [1m[35mCREATE TABLE `productos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `fecha_elaboracion` datetime, `fecha_vencimiento` datetime, `stock` int, `categoria_id` bigint, `marca_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_productos_on_categoria_id`  (`categoria_id`),  INDEX `index_productos_on_marca_id`  (`marca_id`), CONSTRAINT `fk_rails_d08a14d98a`
+FOREIGN KEY (`categoria_id`)
+  REFERENCES `categoria` (`id`)
+, CONSTRAINT `fk_rails_e752c6fdd1`
+FOREIGN KEY (`marca_id`)
+  REFERENCES `marcas` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('2747180386699309680')[0m
+  [1m[35m (1.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2747180386699309680', 0)[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductos (20190429220526)
+  [1m[35m (100.2ms)[0m  [1m[35mCREATE TABLE `productos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `fecha_elaboracion` datetime, `fecha_vencimiento` datetime, `stock` int, `categoria_id` bigint, `marca_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_productos_on_categoria_id`  (`categoria_id`),  INDEX `index_productos_on_marca_id`  (`marca_id`), CONSTRAINT `fk_rails_d08a14d98a`
+FOREIGN KEY (`categoria_id`)
+  REFERENCES `categoria` (`id`)
+, CONSTRAINT `fk_rails_e752c6fdd1`
+FOREIGN KEY (`marca_id`)
+  REFERENCES `marcas` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('2747180386699309680')[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2747180386699309680', 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateCategoria (20190429220739)
+  [1m[35m (117.3ms)[0m  [1m[35mCREATE TABLE `categoria` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `descripcion` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (20.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190429220739')[0m
+  [1m[35m (110.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMarcas (20190429220803)
+  [1m[35m (84.5ms)[0m  [1m[35mCREATE TABLE `marcas` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `descripcion` text, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190429220803')[0m
+  [1m[35m (73.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('2747180386699309680')[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT GET_LOCK('2747180386699309680', 0)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Migrating to CreateProductos (20190429220526)
+  [1m[35m (197.3ms)[0m  [1m[35mCREATE TABLE `productos` (`id` bigint NOT NULL AUTO_INCREMENT PRIMARY KEY, `nombre` varchar(255), `descripcion` varchar(255), `fecha_elaboracion` datetime, `fecha_vencimiento` datetime, `stock` int, `categoria_id` bigint, `marca_id` bigint, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL,  INDEX `index_productos_on_categoria_id`  (`categoria_id`),  INDEX `index_productos_on_marca_id`  (`marca_id`), CONSTRAINT `fk_rails_d08a14d98a`
+FOREIGN KEY (`categoria_id`)
+  REFERENCES `categoria` (`id`)
+, CONSTRAINT `fk_rails_e752c6fdd1`
+FOREIGN KEY (`marca_id`)
+  REFERENCES `marcas` (`id`)
+) ENGINE=InnoDB[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO `schema_migrations` (`version`) VALUES ('20190429220526')[0m
+  [1m[35m (69.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.0ms)[0m  [1m[34mSELECT  `ar_internal_metadata`.* FROM `ar_internal_metadata` WHERE `ar_internal_metadata`.`key` = 'environment' LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT RELEASE_LOCK('2747180386699309680')[0m
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Started GET "/" for ::1 at 2019-04-29 18:13:44 -0400
+  [1m[35m (0.0ms)[0m  [1m[35mSET  @@SESSION.sql_mode = CONCAT(CONCAT(@@sql_mode, ',STRICT_ALL_TABLES'), ',NO_AUTO_VALUE_ON_ZERO'),  @@SESSION.sql_auto_is_null = 0, @@SESSION.wait_timeout = 2147483[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT `schema_migrations`.`version` FROM `schema_migrations` ORDER BY `schema_migrations`.`version` ASC[0m
+Processing by HomeController#index as HTML
+Completed 401 Unauthorized in 55ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for ::1 at 2019-04-29 18:14:00 -0400
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (3.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (345.7ms)
+Completed 200 OK in 4166ms (Views: 4091.1ms | ActiveRecord: 20.0ms)
+
+
+Started POST "/users/sign_in" for ::1 at 2019-04-29 18:14:10 -0400
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gUkLlWG38Y67ZTkBllEHRDlivIJcdS2YcwsnhTLaRzLstKjcY3EDl03KVv/o+AyncC3h5Kd21RnyIk0Vagj+SA==", "user"=>{"email"=>"javiermunozarcaya@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`email` = 'javiermunozarcaya@gmail.com' ORDER BY `users`.`id` ASC LIMIT 1[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 761ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2019-04-29 18:14:11 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 374ms (Views: 296.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/lib/assets/img/sidebar-5.jpg" for ::1 at 2019-04-29 18:14:11 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/lib/assets/img/sidebar-5.jpg"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/sucursals/new" for ::1 at 2019-04-29 18:14:15 -0400
+Processing by SucursalController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering sucursal/new.html.erb within layouts/application
+  [1m[36mGiro Load (0.0ms)[0m  [1m[34mSELECT `giros`.* FROM `giros` ORDER BY id[0m
+  Rendered sucursal/new.html.erb within layouts/application (66.0ms)
+Completed 200 OK in 493ms (Views: 302.3ms | ActiveRecord: 77.1ms)
+
+
+Started GET "/lib/assets/img/sidebar-5.jpg" for ::1 at 2019-04-29 18:14:23 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/lib/assets/img/sidebar-5.jpg"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/productos/new" for ::1 at 2019-04-29 18:15:02 -0400
+Processing by ProductosController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering productos/new.html.erb within layouts/application
+  Rendered productos/_form.html.erb (97.2ms)
+  Rendered productos/new.html.erb within layouts/application (124.5ms)
+Completed 200 OK in 510ms (Views: 378.8ms | ActiveRecord: 21.0ms)
+
+
+Started GET "/lib/assets/img/sidebar-5.jpg" for ::1 at 2019-04-29 18:15:03 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/lib/assets/img/sidebar-5.jpg"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/productos" for ::1 at 2019-04-29 18:15:24 -0400
+Processing by ProductosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NJsVOutpcRaVTvjGFE3ahwDZS1EkdmZxf192eaiEra18vCYtjYBjHoQJTSJV+HK8NFmhTBewicCB+qXvqAVXfg==", "producto"=>{"nombre"=>"dfds", "descripcion"=>"sdfsdf", "fecha_elaboracion(1i)"=>"2019", "fecha_elaboracion(2i)"=>"4", "fecha_elaboracion(3i)"=>"29", "fecha_elaboracion(4i)"=>"22", "fecha_elaboracion(5i)"=>"15", "fecha_vencimiento(1i)"=>"2019", "fecha_vencimiento(2i)"=>"4", "fecha_vencimiento(3i)"=>"29", "fecha_vencimiento(4i)"=>"22", "fecha_vencimiento(5i)"=>"15", "stock"=>"1", "categoria_id"=>"sdf", "marca_id"=>"sdf"}, "commit"=>"Create Producto"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 3 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mCategoria Load (0.0ms)[0m  [1m[34mSELECT  `categoria`.* FROM `categoria` WHERE `categoria`.`id` = 0 LIMIT 1[0m
+  [1m[36mMarca Load (0.0ms)[0m  [1m[34mSELECT  `marcas`.* FROM `marcas` WHERE `marcas`.`id` = 0 LIMIT 1[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK[0m
+  Rendering productos/new.html.erb within layouts/application
+  Rendered productos/_form.html.erb (10.0ms)
+  Rendered productos/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 589ms (Views: 309.2ms | ActiveRecord: 37.0ms)
+
+
+Started GET "/lib/assets/img/sidebar-5.jpg" for ::1 at 2019-04-29 18:15:25 -0400
+  
+ActionController::RoutingError (No route matches [GET] "/lib/assets/img/sidebar-5.jpg"):
+  
+actionpack (5.1.7) lib/action_dispatch/middleware/debug_exceptions.rb:63:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.1.7) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.1.7) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.1.7) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/remote_ip.rb:79:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/request_id.rb:25:in `call'
+rack (2.0.7) lib/rack/method_override.rb:22:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (5.1.7) lib/active_support/cache/strategy/local_cache_middleware.rb:27:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.1.7) lib/action_dispatch/middleware/static.rb:125:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+railties (5.1.7) lib/rails/engine.rb:522:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
