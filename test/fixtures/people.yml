@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  rut: 1
+  nombre: MyString
+  ap_paterno: MyString
+  ap_materno: MyString
+  fecha: 2019-05-02
+
+two:
+  rut: 1
+  nombre: MyString
+  ap_paterno: MyString
+  ap_materno: MyString
+  fecha: 2019-05-02

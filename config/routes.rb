@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :people
   resources :productos
   devise_for :users
   get 'home/index'

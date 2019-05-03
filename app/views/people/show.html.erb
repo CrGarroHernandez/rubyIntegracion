@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rut:</strong>
+  <%= @person.rut %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @person.nombre %>
+</p>
+
+<p>
+  <strong>Ap paterno:</strong>
+  <%= @person.ap_paterno %>
+</p>
+
+<p>
+  <strong>Ap materno:</strong>
+  <%= @person.ap_materno %>
+</p>
+
+<p>
+  <strong>Fecha:</strong>
+  <%= @person.fecha %>
+</p>
+
+<%= link_to 'Edit', edit_person_path(@person) %> |
+<%= link_to 'Back', people_path %>
