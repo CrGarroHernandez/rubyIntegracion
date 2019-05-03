@@ -1,29 +1,43 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Rut:</strong>
-  <%= @person.rut %>
-</p>
+  <div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-plain">
+          <div class="header">
+            <h4 class="title">Cajeros</h4>
+              <p class="category">Listado de Cajeros</p>
+          </div>
+            <div class="content table-responsive table-full-width">
+              <table class="table">
+                <tr>
+                  <th>Rut</th>
+                  <td><%= @person.rut %></td>
+                </tr>
+                <tr>
+                  <th>Nombre</th>
+                  <td><%= @person.nombre %></td>
+                </tr>
+                <tr>
+                  <th>Apellido Paterno</th>
+                  <td><%= @person.ap_paterno %></td>
+                </tr>
+                <tr>
+                  <th>Apellido Materno</th>
+                  <td><%= @person.ap_materno %></td>
+                </tr>
+                <tr>
+                  <th>Fecha Nacimiento</th>
+                  <td><%= @person.fecha %></td>
+                </tr>
+              </table>
+            </div>
+            <%= link_to 'Continuar', people_path %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<%#link_to 'Edit', edit_person_path(@person) %>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @person.nombre %>
-</p>
-
-<p>
-  <strong>Ap paterno:</strong>
-  <%= @person.ap_paterno %>
-</p>
-
-<p>
-  <strong>Ap materno:</strong>
-  <%= @person.ap_materno %>
-</p>
-
-<p>
-  <strong>Fecha:</strong>
-  <%= @person.fecha %>
-</p>
-
-<%= link_to 'Edit', edit_person_path(@person) %> |
-<%= link_to 'Back', people_path %>
