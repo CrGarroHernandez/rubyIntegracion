@@ -1,0 +1,56 @@
+<p id="notice"><%= notice %></p>
+
+<div class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+
+
+                    <div class="col-md-12">
+                        <div class="card card-plain">
+                            <div class="header">
+                                <h4 class="title">Pedidos</h4>
+                                <p class="category">Listado de pedidos</p>
+                                <%= link_to 'Agregar Pedido', new_pedido_path, class: 'btn btn-success btn-fill pull-right' %>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>Usuario</th>
+      <th>Mesa</th>
+      <th>Costo</th>
+      <th>Cod comanda</th>
+      <th>Fecha</th>
+      <th>Descripcion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pedidos.each do |pedido| %>
+      <tr>
+        <td><%= pedido.idUsuario %></td>
+        <td><%= pedido.mesa %></td>
+        <td><%= pedido.costo %></td>
+        <td><%= pedido.idEstadoComanda %></td>
+        <td><%= pedido.fecha %></td>
+        <td><%= pedido.descripcion %></td>
+        <td><%= link_to 'Ver', pedido %></td>
+        <td><%= link_to 'Editar', edit_pedido_path(pedido) %></td>
+        <td><%= link_to 'Eliminar', pedido, method: :delete, data: { confirm: '¿Estas seguro de eliminar este dato?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+ </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>

@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+  <div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card card-plain">
+          <div class="header">
+            <h4 class="title">Pedidos</h4>
+              <p class="category">Vista de Pedido</p>
+          </div>
+            <div class="content table-responsive table-full-width">
+              <table class="table">
+                <tr>
+                  <th>ID. Usuario</th>
+                  <td> <%= @pedido.idUsuario %></td>
+                </tr>
+                <tr>
+                  <th>Mesa</th>
+                  <td> <%= @pedido.mesa %></td>
+                </tr>
+                <tr>
+                  <th>Precio</th>
+                  <td> <%= @pedido.costo %></td>
+                </tr>
+                <tr>
+                  <th>Comanda</th>
+                 <td><%= @pedido.idEstadoComanda %></td>
+                </tr>
+                <tr>
+                  <th>Fecha</th>
+                  <td> <%= @pedido.fecha %></td>
+                </tr>
+                 <tr>
+                  <th>Descripcion</th>
+                  <td> <%= @pedido.descripcion %></td>
+                </tr>
+
+
+              </table>
+            </div>
+            <div>
+            <%= link_to 'Listado', pedidos_path, class: 'btn btn-warning btn-fill pull-right'  %>
+            </div>
+            <div style="margin-right: 100px">
+            <%= link_to 'Editar', edit_pedido_path(@pedido), class: 'btn btn-primary btn-fill pull-right'  %>
+      </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<%#link_to 'Edit', edit_person_path(@person) %>
+
+
+
+
+<%
+=begin%>
+ <%= link_to 'Editar', edit_pedido_path(@pedido) %> |
+<%= link_to 'Retroseder', pedidos_path %>
+<%
+=end%>

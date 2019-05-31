@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :plato_pedidos
+  resources :pedidos
+  resources :platos
   resources :people
   resources :productos
   devise_for :users

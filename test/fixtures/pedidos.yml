@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  idUsuario: 1
+  mesa: 1
+  costo: 1
+  idEstadoComanda: 1
+  fecha: 2019-05-30
+  descripcion: MyText
+
+two:
+  idUsuario: 1
+  mesa: 1
+  costo: 1
+  idEstadoComanda: 1
+  fecha: 2019-05-30
+  descripcion: MyText

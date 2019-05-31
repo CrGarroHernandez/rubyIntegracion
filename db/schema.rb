@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20190503025904) do
+ActiveRecord::Schema.define(version: 20190530234742) do
 
   create_table "categoria", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.string "nombre"
@@ -30,12 +30,40 @@ ActiveRecord::Schema.define(version: 20190503025904) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "pedidos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.integer "idUsuario"
+    t.integer "mesa"
+    t.integer "costo"
+    t.integer "idEstadoComanda"
+    t.date "fecha"
+    t.text "descripcion"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "people", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
     t.integer "rut"
     t.string "nombre"
     t.string "ap_paterno"
     t.string "ap_materno"
     t.date "fecha"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "plato_pedidos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.bigint "plato_id"
+    t.bigint "pedido_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["pedido_id"], name: "index_plato_pedidos_on_pedido_id"
+    t.index ["plato_id"], name: "index_plato_pedidos_on_plato_id"
+  end
+
+  create_table "platos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=latin1" do |t|
+    t.string "nombre"
+    t.integer "costo"
+    t.boolean "disponible"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -79,6 +107,8 @@ ActiveRecord::Schema.define(version: 20190503025904) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "plato_pedidos", "pedidos"
+  add_foreign_key "plato_pedidos", "platos"
   add_foreign_key "productos", "categoria", column: "categoria_id"
   add_foreign_key "productos", "marcas"
   add_foreign_key "sucursals", "giros", name: "sucursal_giro_fk"

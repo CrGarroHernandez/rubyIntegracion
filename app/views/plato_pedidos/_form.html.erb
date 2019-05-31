@@ -1,0 +1,70 @@
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="header">
+            <h4 class="title">Plato Pedido</h4>
+          </div>
+          <div class="content">
+            <%= form_with(model: plato_pedido, local: true) do |form| %>
+  <% if plato_pedido.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(plato_pedido.errors.count, "error") %> prohibited this plato_pedido from being saved:</h2>
+
+      <ul>
+      <% plato_pedido.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :plato_id %>
+    <%= form.text_field :plato_id, id: :plato_pedido_plato_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :pedido_id %>
+    <%= form.text_field :pedido_id, id: :plato_pedido_pedido_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
+
+<div class="content table-responsive table-full-width">
+              <table class="table table-hover">
+
+<thead>
+    <tr>
+      <th>Plato</th>
+      <th>Pedido</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @plato_pedidos.each do |plato_pedido| %>
+      <tr>
+        <td><%= plato_pedido.plato.nombre %></td>
+        <td><%= plato_pedido.plato.costo %></td>
+        <td><%= link_to 'Show', plato_pedido %></td>
+        <td><%= link_to 'Edit', edit_plato_pedido_path(plato_pedido) %></td>
+        <td><%= link_to 'Destroy', plato_pedido, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+                </table>
+            </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
