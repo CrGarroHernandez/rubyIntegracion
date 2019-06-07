@@ -1,21 +1,24 @@
+ <div class="alert" role="alert" style="background-color: #EDE211">
+</div>
 <div class="content">
-  <div class="container" style="padding-top: 150px">
+  <div class="container" style="padding-top: 65px">
     <div class="row">
       <div class="col-6 col-md-4"></div>
       <div class="col-6 col-md-4">
         <div class="card text-center">
           <div class="card-header" style="padding-top: 30px">
             <h2>Inicio de sesión</h2>
+          <%= image_tag("logo_weno2.png", :alt => "rss feed") %>
           </div>
           <div class="card-body" style="padding-bottom: 50px; padding-top:20px">
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-              <div class="field">
-                <%= f.label :Correo %><br />
-                <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+              <div class="form-group">
+                <%= f.label :Correo, for: "formGroupExampleInput" %>
+                <%= f.email_field :email, class: "form-control", :style => "margin-left:auto; width: 196px; margin-right:auto", autofocus: true, autocomplete: "email" %>
               </div>
-              <div class="field">
-                <%= f.label :Clave %><br />
-                <%= f.password_field :password, autocomplete: "current-password" %>
+              <div class="form-group">
+                <%= f.label :Contraseña %><br />
+                <%= f.password_field :password, class: "form-control", :style => "margin-left:auto; width: 196px; margin-right:auto", autocomplete: "current-password" %>
               </div>
             <% if devise_mapping.rememberable? %>
               <div class="field">
@@ -24,7 +27,7 @@
               </div>
             <% end %>
               <div class="actions" style="margin-bottom: 15px">
-                <%= f.submit "Ingresar" ,:class=>'btn btn-sucess'%>
+                <%= f.submit "Ingresar" ,:class=>'btn', :style => "background-color :#EDE211; border-right:0; border-left:0; border-top:0; border-bottom:0"%>
               </div>
                 <% end %>
                 <%= render "devise/shared/links" %>

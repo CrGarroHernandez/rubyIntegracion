@@ -4,7 +4,10 @@ Rails.application.routes.draw do
   resources :platos
   resources :people
   resources :productos
-  devise_for :users
+  devise_for :users, skip: [:registrations]
+    devise_scope :user do
+    get "/sign_up" => "devise/registrations#new", as: "new_user_registration" # custom path to sign_up/registration
+  end
   get 'home/index'
   root to: 'home#index'
   get '/sucursals', to: 'sucursal#index'

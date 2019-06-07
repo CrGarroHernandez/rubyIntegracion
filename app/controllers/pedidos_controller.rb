@@ -28,7 +28,7 @@ class PedidosController < ApplicationController
 
     respond_to do |format|
       if @pedido.save
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully created.' }
+        format.html { redirect_to @pedido, notice: 'Pedido fue creado exitosamente.' }
         format.json { render :show, status: :created, location: @pedido }
       else
         format.html { render :new }
@@ -42,7 +42,7 @@ class PedidosController < ApplicationController
   def update
     respond_to do |format|
       if @pedido.update(pedido_params)
-        format.html { redirect_to @pedido, notice: 'Pedido was successfully updated.' }
+        format.html { redirect_to @pedido, notice: 'Pedido fue actualizado exitosamente.' }
         format.json { render :show, status: :ok, location: @pedido }
       else
         format.html { render :edit }
@@ -56,7 +56,7 @@ class PedidosController < ApplicationController
   def destroy
     @pedido.destroy
     respond_to do |format|
-      format.html { redirect_to pedidos_url, notice: 'Pedido was successfully destroyed.' }
+      format.html { redirect_to pedidos_url, notice: 'Pedido fue eliminado exitosamente.' }
       format.json { head :no_content }
     end
   end

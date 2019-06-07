@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= favicon_link_tag 'icono.png' %>
   </head>
 
   <body>
   <% if user_signed_in?  %>
-    <div class="wrapper">
-        <div class="sidebar" data-color="orange" data-image="../../lib/assets/img/sidebar-5.jpg">
+    <div class="wrapper" style="background-color: white">
+        <div class="sidebar" data-color="yellow" data-image="../../lib/assets/img/sidebar-5.jpg">
 
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
@@ -23,7 +23,7 @@
             <div class="logo">
 
                 <a href="/" class="simple-text">
-                    <%= image_tag("DondeNAchito1.jfif", :alt => "rss feed", :height =>"140", :width => "140") %>
+                    <%= image_tag("logo_weno3.png", :alt => "rss feed") %>
                 </a>
             </div>
 
@@ -40,7 +40,7 @@
                         <i class="fa fa-home"></i>
                         <p>Cajeros</p>
                     </a>
-                    <ul class="dropdown-menu" style="background-color: orange">
+                    <ul class="dropdown-menu" style="background-color: gray">
                         <li class="nav-item dropdown">
                             <a href="/people">
                                 <i class="fa fa-book"></i>
@@ -80,7 +80,7 @@
                         <i class="fa fa-home"></i>
                         <p>Sucursal</p>
                     </a>
-                    <ul class="dropdown-menu" style="background-color: orange">
+                    <ul class="dropdown-menu" style="background-color: gray">
                         <li class="nav-item dropdown">
                             <a href="/sucursals">
                                 <i class="fa fa-book"></i>
