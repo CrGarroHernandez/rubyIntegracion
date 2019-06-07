@@ -42,7 +42,7 @@ class PedidosController < ApplicationController
   def update
     respond_to do |format|
       if @pedido.update(pedido_params)
-        format.html { redirect_to @pedido, notice: 'Pedido fue actualizado exitosamente.' }
+        format.html { redirect_to @pedido, notice: 'Pedido fue editado exitosamente.' }
         format.json { render :show, status: :ok, location: @pedido }
       else
         format.html { render :edit }

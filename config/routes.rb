@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get '/pedido_api', to: 'pedido_api#new'
   resources :plato_pedidos
   resources :pedidos
   resources :platos

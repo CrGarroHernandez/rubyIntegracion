@@ -4,9 +4,14 @@
       </div>
 <% end %>
 <div class="content">
+    <h3 class="text-center" style="margin-top: 0px;">BIENVENIDO</h3>
+                        <h5 class="text-center">Módulo de Ventas</h5>
+                        <br>
                 <div class="container-fluid">
+
                     <div class="row">
-                        <div class="col-md-6">
+
+                        <div class="col-md-3">
                             <a href="https://es-la.facebook.com/" style="text-decoration:none;">
                                 <div class="card text-center">
                                     <div class="header" style="background-color: #dc3545";>
@@ -20,7 +25,7 @@
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-3">
                             <a href="https://www.google.cl/webhp?hl=es&sa=X&ved=0ahUKEwjwt4eN0MjhAhXIILkGHcsZ
 CS4QPAgH" style="text-decoration:none;">
                                 <div class="card text-center">
@@ -35,11 +40,47 @@ CS4QPAgH" style="text-decoration:none;">
                                 </div>
                             </a>
                         </div>
+                        <div class="col-md-3">
+                            <a href="/platos" style="text-decoration:none;">
+                                <div class="card text-center">
+                                    <div class="header" style="background-color: #17a2b8";>
+                                        <h4 class="title">Registrar Compra</h4>
+                                    </div>
+                                    <div class="content bg-info">
+                                        <p class="category">Realizar pago de pedido</p>
+                                        <img src="https://img.icons8.com/metro/104/000000/refund.png">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-md-3">
+                            <a href="/pedidos" style="text-decoration:none;">
+                                <div class="card text-center">
+                                    <div class="header" style="background-color: #28a745";>
+                                        <h4 class="title" style="text-align: center">Realizar Pedido</h4>
+                                        <!--<p class="category">Last Campaign Performance</p>-->
+                                    </div>
+                                    <div class="content bg-success">
+                                        <p class="category">Registro del menú</p>
+                                        <img src="https://img.icons8.com/metro/104/000000/waiter.png">
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+
+                    </div>
+
+                                        <div class="row">
+                        <div class="col-md-12">
+
+                                        <div id="chart_div"></div>
+                                </div>
+                        </div>
                     </div>
 
 
 
-                    <div class="row">
+                    <!--<div class="row">
                         <div class="col-md-6">
                             <a href="/platos" style="text-decoration:none;">
                                 <div class="card text-center">
@@ -58,15 +99,53 @@ CS4QPAgH" style="text-decoration:none;">
                                 <div class="card text-center">
                                     <div class="header" style="background-color: #28a745";>
                                         <h4 class="title" style="text-align: center">Realizar Pedido</h4>
-                                        <!--<p class="category">Last Campaign Performance</p>-->
-                                    </div>
-                                    <div class="content bg-success">
-                                        <p class="category">Registro del menú</p>
-                                        <img src="https://img.icons8.com/metro/104/000000/waiter.png">
+                                        <p class="category">Last Campaign Performance</p>>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                    </div>
+                    </div>-->
                 </div>
-            </div>
+
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages: ['corechart', 'line']});
+google.charts.setOnLoadCallback(drawBackgroundColor);
+
+function drawBackgroundColor() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('number', 'X');
+      data.addColumn('number', 'Pesos');
+
+      data.addRows([
+        [0, 0],   [1, 10],  [2, 23],  [3, 17],  [4, 18],  [5, 9],
+        [6, 11],  [7, 27],  [8, 33],  [9, 40],  [10, 32], [11, 35],
+        [12, 30], [13, 40], [14, 42], [15, 47], [16, 44], [17, 48],
+        [18, 52], [19, 54], [20, 42], [21, 55], [22, 56], [23, 57],
+        [24, 60], [25, 50], [26, 52], [27, 51], [28, 49], [29, 53],
+        [30, 55], [31, 60], [32, 61], [33, 59], [34, 62], [35, 65],
+        [36, 62], [37, 58], [38, 55], [39, 61], [40, 64], [41, 65],
+        [42, 63], [43, 66], [44, 67], [45, 69], [46, 69], [47, 70],
+        [48, 72], [49, 68], [50, 66], [51, 65], [52, 67], [53, 70],
+        [54, 71], [55, 72], [56, 73], [57, 75], [58, 70], [59, 68],
+        [60, 64], [61, 60], [62, 65], [63, 67], [64, 68], [65, 69],
+        [66, 70], [67, 72], [68, 75], [69, 80], [70, 82], [71, 85],
+      ]);
+
+      var options = {
+        hAxis: {
+          title: 'Semana(s)'
+        },
+        vAxis: {
+          title: 'Ingresos'
+        },
+        backgroundColor: '#ffffff'
+      };
+
+      var chart = new google.visualization.LineChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+    </script>

@@ -519,6 +519,17 @@ input:focus {
     background-size: 150% 150%;
 }
 
+.sidebar[data-color="white"]:after {
+    background: #FFFFFF;
+    background: -moz-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #FFFFFF), color-stop(100%, #943bea));
+    background: -webkit-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);
+    background: -o-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);
+    background: -ms-linear-gradient(top, #FFFFFF 0%, #FFFFFF 100%);
+    background: linear-gradient(to bottom, #FFFFFF 0%, #FFFFFF 100%);
+    background-size: 150% 150%;
+}
+
 .main-panel {
     position: relative;
     z-index: 2;

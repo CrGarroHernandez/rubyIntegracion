@@ -13,8 +13,8 @@
 
   <body>
   <% if user_signed_in?  %>
-    <div class="wrapper" style="background-color: white">
-        <div class="sidebar" data-color="yellow" data-image="../../lib/assets/img/sidebar-5.jpg">
+    <div class="wrapper" style="background-color: #FFFFFF">
+        <div class="sidebar" data-color="white" data-image="../../lib/assets/img/sidebar-5.jpg">
 
     <!--   you can change the color of the sidebar using: data-color="blue | azure | green | orange | red | purple" -->
 
@@ -23,20 +23,20 @@
             <div class="logo">
 
                 <a href="/" class="simple-text">
-                    <%= image_tag("logo_weno3.png", :alt => "rss feed") %>
+                    <%= image_tag("logo_weno6.png", :alt => "rss feed") %>
                 </a>
             </div>
 
 
             <ul class="nav">
                 <li>
-                    <a href="/">
+                    <a href="/" style="color: #4E4A47">
                         <i class="fa fa-pie-chart"></i>
                         <p>Inicio</p>
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a style="color: #4E4A47" class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-home"></i>
                         <p>Cajeros</p>
                     </a>
@@ -56,19 +56,25 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="#" style="color: #4E4A47">
                         <i class="fa fa-table"></i>
                         <p>Finanzas</p>
                     </a>
                 </li>
                 <li>
-                    <a href="/pedidos">
+                    <a href="/pedidos" style="color: #4E4A47">
                         <i class="fa fa-file-text-o"></i>
                         <p>Pedido</p>
                     </a>
                 </li>
                 <li>
-                    <a href="#">
+                    <a href="/pedido_api" style="color: #4E4A47">
+                        <i class="fa fa-link" aria-hidden="true"></i>
+                        <p>Pedido API</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" style="color: #4E4A47">
                         <i class="fa fa-flask"></i>
                         <p>Resumen del Día</p>
                     </a>
@@ -76,13 +82,13 @@
 
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" style="color: #4E4A47" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
                         <i class="fa fa-home"></i>
                         <p>Sucursal</p>
                     </a>
                     <ul class="dropdown-menu" style="background-color: gray">
                         <li class="nav-item dropdown">
-                            <a href="/sucursals">
+                            <a href="/sucursals" >
                                 <i class="fa fa-book"></i>
                                 <p>Listado</p>
                             </a>
@@ -102,7 +108,7 @@
 
     <div class="main-panel">
         <nav class="navbar navbar-default navbar-fixed">
-            <div class="container-fluid">
+            <div class="container-fluid" style="background-color: #EDE211">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2">
                         <span class="sr-only">Toggle navigation</span>
@@ -118,7 +124,7 @@
 
                             <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
-                        <p><strong><%= current_user.email %></strong></p>
+                        <p style="color: #4E4A47"><strong><%= current_user.email %></strong></p>
                     </a>
                     <ul class="dropdown-menu">
                         <li class="nav-item dropdown">
@@ -147,33 +153,110 @@
             </div>
         </nav>
 
+
+
  <% end %>
 
 
         <%= yield %>
         <% if user_signed_in?  %>
         <footer class="footer">
-            <div class="container-fluid">
+            <div class="container-fluid text-center">
                 <nav class="pull-left">
                     <ul>
                         <li>
                             <a href="#">
-                                Inicio
+
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Company
+
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                                Portfolio
+
                             </a>
                         </li>
                         <li>
                             <a href="#">
-                               Blog
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.pichunter.com/">
+Derechos de Autor © Epichunter 2019
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+
                             </a>
                         </li>
                     </ul>
@@ -185,5 +268,25 @@
     </div>
     <% end %>
   </body>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load("current", {packages:["corechart"]});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Task', 'Hours per Day'],
+          ['Work',     11],
+          ['Eat',      2],
+          ['Commute',  2]
+        ]);
 
+        var options = {
+          title: 'My Daily Activities',
+          is3D: true,
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+        chart.draw(data, options);
+      }
+    </script>
 </html>

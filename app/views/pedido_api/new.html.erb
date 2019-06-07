@@ -1,0 +1,50 @@
+<% flash.each do |key, value| %>
+      <div class="<%= flash_class(key) %>">
+            <%= value %>
+      </div>
+<% end %>
+
+<div class="content">
+            <div class="container-fluid">
+                <div class="row">
+
+
+
+                    <div class="col-md-12">
+                        <div class="card card-plain">
+                            <div class="header">
+                                <h4 class="title">Pedidos API</h4>
+                                <p class="category">Listado de pedidos desde API</p>
+                            </div>
+                            <div class="content table-responsive table-full-width">
+                                <table class="table table-hover">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre Plato</th>
+      <th>Precio</th>
+      <th>Disponibilidad</th>
+    </tr>
+  </thead>
+  <tbody>
+  	<% @objects.each do |object|%>
+    <tr>
+	      <th><%= object["id"] %></th>
+	      <td><%= object["nombre"] %></td>
+          <td><%= object["coste"] %></td>
+          <td><%= object["disponible"] %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+ </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
