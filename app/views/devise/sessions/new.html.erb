@@ -19,11 +19,11 @@
             <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
               <div class="form-group">
                 <%= f.label :Correo, for: "formGroupExampleInput" %>
-                <%= f.email_field :email, class: "form-control", :style => "margin-left:auto; width: 196px; margin-right:auto", autofocus: true, autocomplete: "email" %>
+                <%= f.email_field :email, class: "form-control", :style => "margin-left:auto; width: 196px; margin-right:auto", autofocus: true, autocomplete: "email", :required => true %>
               </div>
               <div class="form-group">
                 <%= f.label :Contraseña %><br />
-                <%= f.password_field :password, class: "form-control", :style => "margin-left:auto; width: 196px; margin-right:auto", autocomplete: "current-password" %>
+                <%= f.password_field :password, class: "form-control", :style => "margin-left:auto; width: 196px; margin-right:auto", autocomplete: "current-password", :required => true %>
               </div>
             <% if devise_mapping.rememberable? %>
               <div class="field">

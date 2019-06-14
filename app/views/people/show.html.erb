@@ -37,7 +37,12 @@
                 </tr>
               </table>
             </div>
-            <%= link_to 'Continuar', people_path %>
+            <div>
+            <%= link_to 'Listado', people_path, class: 'btn btn-warning btn-fill pull-right'  %>
+            </div>
+            <div style="margin-right: 100px">
+            <%= link_to 'Editar', edit_person_path(@person), class: 'btn btn-primary btn-fill pull-right'  %>
+      </div>
           </div>
         </div>
       </div>
